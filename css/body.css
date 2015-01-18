@@ -2,9 +2,22 @@
     margin-top: 50px;
 }
 
-.sidebar-left {
+#sidebar-left {
     background-color: #157791;
     height: 700px; // temprary!
+    padding-top: 3px;
+}
+.nav.main-menu {
+    margin: 0 -15px;
+}
+.nav.main-menu a {
+    color: #f5f5f5;
+}
+.nav.main-menu a.active {
+    background: rgba(0, 0, 0, 0.12);
+}
+.nav.main-menu a:hover {
+    background: rgba(0, 0, 0, 0.06);
 }
 
 #content {
