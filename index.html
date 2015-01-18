@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/global.css">
-    <title>Generate A document</title>
+    <title>Generate a document</title>
 </head>
 
 <body>
 <nav id="header" class="row navbar-wrapper navbar-default navbar-fixed-top container-fluid" role="navigation">
         <div class="row">
-            <div id="brand" class="navbar-header col-xs-12 col-sm-3 col-md-2">
-                <a class="navbar-brand" href="#">A document</a>
+            <div id="brand" class="navbar-header col-xs-12 col-sm-2 col-md-2">
+                <a class="navbar-brand" href="#"><b>Docer</b></a>
                 <a href="#" class="show-sidebar pull-right">
                     <i class="fa fa-bars"></i>
                 </a>
@@ -35,27 +35,37 @@
         </div> <!-- end of row -->
 </nav> <!-- end of header -->
 
-<div id="main" class="container-fluid">
+<div id="main" class="container-fluid sidebar-show">
     <div class="row">
         <div id="sidebar-left" class="col-sm-3 col-md-2 col-xs-1">
             <ul class="nav main-menu">
                 <li>
-                    <a class="active">
+                    <a class="active ajax-link">
                         <i class="fa fa-home"></i>
                         <span>Գլխավոր</span>
                     </a>
                 </li>
-                <li>
-                    <a>Page 1</a>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        <i class="fa fa-pencil-square-o"></i>
+                        <span class="hidden-xs">Կաղապարներ</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="ajax-link" href="pages/XXX.html">Ինքնակենսագրություն</a></li>
+                        <li><a class="ajax-link" href="pages/XXX.html">Կուրսային</a></li>
+                        <li><a class="ajax-link" href="pages/XXX.html">Դիմում</a></li>
+                        <li><a class="ajax-link" href="pages/XXX.html">Դիպլոմային</a></li>
+                        <li><a class="ajax-link" href="pages/XXX.html">Ռեֆերատ</a></li>
+                    </ul>
                 </li>
                 <li>
                     <a>Page 2</a>
                 </li>
             </ul>
         </div>
-        <div id="content" class="col-xs-12 col-sm-10">
-            <div id="page-content">
-                <h1>This is a content</h1>
+        <div id="content" class="col-xs-12 col-sm-12">
+            <div id="ajax-content">
+                <h1>Ajax can not load html page</h1>
             </div>
         </div>
 
@@ -68,9 +78,14 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="http://code.jquery.com/jquery.js"></script>
+
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
     <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <!--the main functionality-->
+    <script src="js/main.js"></script>
 
 </body>
 </html>
