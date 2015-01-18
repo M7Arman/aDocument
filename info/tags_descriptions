@@ -4,7 +4,7 @@
     navbar-fixed - top helps to make the menu bar fixed at the top of the page even if we are scrolling.
 
 <div> tag
-    container - makes sure that your content is aligned, with a decent margin from each side of the webpage and is also centered on the browser screen.
+    container-fluid - makes sure that your content is aligned, with a decent margin from each side of the webpage and is also centered on the browser screen.
     navbar-header - is used for branding purposes.
     navbar-brand - to display the name of the website.
 
@@ -19,3 +19,6 @@
 
 <li> tag
     active - shows that the tag is submitted(marks the current page).
+
+
+    collapse & navbar-collapse - hide the div for mobile device

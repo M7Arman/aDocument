@@ -1,9 +1,25 @@
 #header {
-    background-color: #004B6A;
-    box-shadow: 0 2px 4px #050C3A;
+    background-color: #E7E8F4;
+    box-shadow: 0 2px 4px #000000;
     z-index: 2000;
 }
-
 #header .navbar-brand {
     color: rgb(172, 179, 181);
+}
+#header #brand {
+    line-height: 50px;
+    background-color: #1a596a;
+}
+a.show-sidebar {
+    float: left;
+    color:#ADADAD;
+    margin-right: 8px;
+    outline: none;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+a.show-sidebar:hover {
+    color:#000;
 }

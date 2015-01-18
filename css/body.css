@@ -1,0 +1,16 @@
+#main {
+    margin-top: 50px;
+}
+
+.sidebar-left {
+    background-color: #157791;
+    height: 700px; // temprary!
+}
+
+#content {
+    position: relative;
+    z-index: 10;
+    background: #ebebeb;
+    box-shadow: 0 0 6px #131313;
+    height: 700px; // temprary!
+}
