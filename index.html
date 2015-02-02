@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-beta.3/css/select2.min.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/global.css">
@@ -36,30 +37,45 @@
 </nav> <!-- end of header -->
 
 <div id="main" class="container-fluid sidebar-show">
+
     <div class="row">
         <div id="sidebar-left" class="col-sm-3 col-md-2 col-xs-1">
-            <ul class="nav main-menu">
+            <ul class="nav nav-stacked main-menu" id="accordion1">
                 <li>
-                    <a class="active ajax-link">
+                    <a class="ajax-link parent active" href="pages/home.html">
                         <i class="fa fa-home"></i>
-                        <span>Գլխավոր</span>
+                        <span class="hidden-xs">Գլխավոր</span>
                     </a>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">
+                <li>
+                    <a class="parent" data-toggle="collapse" data-parent="#accordion1" href="#firstLink">
                         <i class="fa fa-pencil-square-o"></i>
                         <span class="hidden-xs">Կաղապարներ</span>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="ajax-link" href="pages/XXX.html">Ինքնակենսագրություն</a></li>
-                        <li><a class="ajax-link" href="pages/XXX.html">Կուրսային</a></li>
-                        <li><a class="ajax-link" href="pages/XXX.html">Դիմում</a></li>
-                        <li><a class="ajax-link" href="pages/XXX.html">Դիպլոմային</a></li>
-                        <li><a class="ajax-link" href="pages/XXX.html">Ռեֆերատ</a></li>
+                    <ul id="firstLink" class="collapse nav">
+                        <li><a class="ajax-link" href="pages/form.html">Ինքնակենսագրություն</a></li>
+                        <li><a class="ajax-link" href="pages/courswork.html">Կուրսային</a></li>
+                        <li><a class="ajax-link" href="pages/form.html">Դիմում</a></li>
+                        <li><a class="ajax-link" href="pages/form.html">Դիպլոմային</a></li>
+                        <li><a class="ajax-link" href="pages/form.html">Ռեֆերատ</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a>Page 2</a>
+                    <a class="parent" data-toggle="collapse" data-parent="#accordion1" href="#secondLink">
+                        <i class="fa fa-suitcase"></i>
+                        <span class="hidden-xs">Շտեմարան</span>
+                    </a>
+                    <ul id="secondLink" class="collapse nav">
+                        <li><a class="ajax-link" href="pages/XXX.html">Վիդեոդասեր</a></li>
+                        <li><a class="ajax-link" href="pages/XXX.html">Հոդվածներ</a></li>
+                        <li><a class="ajax-link" href="pages/XXX.html">Գրքեր</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="ajax-link parent" href="pages/about_us.html">
+                        <i class="fa fa-users"></i>
+                        <span class="hidden-xs">Մեր մասին</span>
+                    </a>
                 </li>
             </ul>
         </div>

@@ -45,12 +45,29 @@
 .nav.main-menu {
     margin: 0 -15px;
 }
-.nav.main-menu a {
+.nav.main-menu > li > a {
     color: #f5f5f5;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
 }
 .nav.main-menu a.active {
     background: rgba(0, 0, 0, 0.12);
 }
 .nav.main-menu a:hover {
     background: rgba(0, 0, 0, 0.06);
+}
+
+.nav.main-menu > li > a, .nav.main-menu > li > ul > li > a {
+    color:#f0f0f0;
+    min-height: 40px;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.nav.main-menu > li > ul {
+    background-color: #3E98B0;
 }
