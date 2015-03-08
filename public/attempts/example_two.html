@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>The second example of Twitter Bootstrap 3 Accordion</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-beta.3/css/select2.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-4">
+            <h1>The basics</h1>
+
+            <p>
+                Select2 can take a regular select box like this...
+            </p>
+            <select class="js-example-basic-single">
+                <option value="AL">Alabama</option>
+                <option value="WY">Wyoming</option>
+                <option value="VA">Vanadzor</option>
+            </select>
+        </div>
+    </div>
+<script>
+    $(document).ready(function() {
+        LoadSelect2Script(DemoSelect2);
+    });
+
+    /**
+     *  Run Select2 plugin on elements
+     */
+    function DemoSelect2(){
+        $('.js-example-basic-single').select2();
+    }
+
+    /**
+     * Dynamically load jQuery Select2 plugin
+     * homepage: https://github.com/ivaynberg/select2  v3.4.5  license - GPL2
+     */
+    function LoadSelect2Script(callback){
+        if (!$.fn.select2){
+            $.getScript('//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-beta.3/js/select2.min.js', callback);
+        }
+        else {
+            if (callback && typeof(callback) === "function") {
+                callback();
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -71,3 +71,23 @@
 .nav.main-menu > li > ul {
     background-color: #3E98B0;
 }
+
+#paper {
+	width: 210mm;
+	min-height: 197mm;
+	border: 1px solid #A2A2A2;
+	top: 1.25em;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color: #000;
+	font-size: inherit;
+	background: #FFF;
+	position: relative;
+	padding: 0;
+	overflow: hidden;
+	margin: 0 auto 5em;
+	-webkit-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.7);
+	-moz-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.7);
+	box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.7);
+}

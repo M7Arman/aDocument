@@ -28,6 +28,29 @@ function loadAjaxContent(url){
     });
 }
 
+var fileName;
+/**
+ * TODO: Add comment
+ */
+function sendJson(url, body){
+	console.log('Sending json to ' + url);
+	var jsonBody = JSON.stringify(body);
+    $.ajax({
+        type: 'POST',
+		url: url,
+		data: jsonBody,
+		contentType: 'application/json; charset=utf-8',
+		success: function(data) {
+			fileName = data;
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+			alert(errorThrown);
+        },
+    });
+	
+}
+
+
 /**
  * Loads a plugin from the given path and execute the given function after that.
  * @param path

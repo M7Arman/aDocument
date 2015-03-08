@@ -1,0 +1,66 @@
+<div class="row">
+	<div id="paper">
+		<form class="form-horizontal" role="form" action="/uploads/referat_template.pdf">
+			<div class="form-group">
+				<label for="firstname" class="col-sm-2 control-label">Անուն</label>
+				<div class="col-sm-10 col-md-5">
+					<input  type="text" name="A" class="form-control" id="firstname"
+						   placeholder="Մուքտագրեք ձեր անունը․․․">
+					<p class="help-block">Օր․՝ Պողոս</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="secondname" class="col-sm-2 control-label">Ազգանուն</label>
+				<div class="col-sm-10 col-md-5">
+					<input type="text" name="B" class="form-control" id="secondname"
+						   placeholder="Մուքտագրեք ձեր ազգանունը․․․">
+					<p class="help-block">Օր․՝ Պողոսյան</p>
+				</div>
+			</div>
+			<div class="form-group">
+			<p>...</p>
+			</div>
+		</form>
+	</div>
+	<input id="generate" type="button" name="g" value="Generate document" id="g">
+	<a id="download-document" href="#">Download</a>
+	<div id="result" style="background-color: #cccccc"></div>
+</div>
+
+<!--script src="js/libs/form2js.js"></script-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.fileDownload/1.4.2/jquery.fileDownload.min.js"></script>
+
+<script type="text/javascript">
+	
+var select2Url = '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-beta.3/js/select2.min.js';
+/* This functionality works when the document is ready. */
+$(function () {
+    loadPlugin(select2Url, 'select2', initalSelect2);
+	
+	// TODO: Add comment 
+    $('input#generate').on( 'click', function(event) {
+        event.preventDefault();
+		var requestBody = {
+			"first_name" : "Arman",
+			"last_name" : "Kostandyan"
+		};
+		
+		sendJson('/courswork/create', requestBody);	
+    });
+	
+	// TODO: Add comment 
+	$('a#download-document').click(function(e) {
+    	e.preventDefault();  //stop the browser from following
+		window.open('../documents/coursworks/' + fileName);
+	});
+});
+
+function processDate() {
+    // ?.select2();
+}
+
+function initalSelect2() {
+    // ?.select2();
+}
+
+</script>

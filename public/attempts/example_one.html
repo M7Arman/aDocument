@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example of Twitter Bootstrap 3 Accordion</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="row">
+    <div class="page-header">
+        <h3>Proizvodi</h3>
+
+    </div>
+    <div class="col-md-3">
+        <ul class="nav nav-stacked" id="accordion1">
+            <li>
+                <a href="#" class="ajax-link">
+                    <i class="fa fa-home"></i>
+                    <span class="hidden-xs">Գլխավոր</span>
+                </a>
+            </li>
+            <li class="list-group">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#firstLink">
+                    <i class="fa fa-pencil-square-o"></i>
+                    <span class="hidden-xs">Կաղապարներ</span>
+                </a>
+                <ul id="firstLink" class="collapse">
+                    <li>SubTest1</li>
+                    <li>SubTest1</li>
+                    <li>SubTest1</li>
+                </ul>
+            </li>
+            <li class="list-group">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#secondLink">
+                    <i class="fa fa-suitcase"></i>
+                    <span class="hidden-xs">Շտեմարան</span>
+                </a>
+
+                <ul id="secondLink" class="collapse">
+                    <li>SubTest2</li>
+                    <li>SubTest2</li>
+                    <li>SubTest2</li>
+                    <li>SubTest2</li>
+                </ul>
+            </li>
+            <li><a href="#">Test1</a>
+            </li>
+            <li><a href="#">Test1</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-9"></div>
+</div>
+</body>
+</html>
