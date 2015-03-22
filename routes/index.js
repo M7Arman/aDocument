@@ -11,9 +11,9 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 /* POST the document form content as a json.*/ 
 router.post('/courswork/create', function(req, res, next) {
 	console.log("Request: %j", req.body);
-	var file = 'VIH208b_Labs_ARM.docx';
+	var fileName = 'VIH208b_Labs_ARM.docx';
 	res.status(200);
-	res.send(file);
+	res.send(fileName);
 });
 
 module.exports = router;

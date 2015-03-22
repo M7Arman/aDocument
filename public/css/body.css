@@ -91,3 +91,88 @@
 	-moz-box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.7);
 	box-shadow: -1px 3px 5px 0px rgba(0,0,0,0.7);
 }
+
+.block {
+	padding: 10px;
+	margin-bottom: 3px;
+	border: solid 1px #FFFFFF;
+	-webkit-transition: border 0.3s;
+	-moz-transition: border 0.3s;
+	-o-transition: border 0.3s;
+	transition: border 0.3s;
+}
+
+.block:hover, .block:focus { 
+    border: solid 2px #157791;
+}
+
+․center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#paper-writable-place {
+	left: 7%;
+	top: 15mm;
+	width: 86%;
+	position: relative;
+}
+
+#university-name {
+	width: 80%;
+	font-size: 16px;
+}
+
+#chair, #department {
+	width: 60%;
+	font-size: 14px;
+}
+
+#ministry-of-education, #courswork-text, #chair-name, #department-name {
+	font-weight: bold;
+}
+
+#ministry-of-education {
+	font-size: 20px;
+}
+
+#courswork-text {
+	font-size: 28px;
+}
+
+.advanced-block {
+	padding: 0px;
+	display: table;
+	height: 45px;
+}
+
+#paper input[type=text] {
+	outline: none; /* remove outline padding from input*/
+}
+
+.inner-input{
+	float: left;
+	margin: 0px;
+	margin-right: 5px;
+	border: solid 1px #FFFFFF;
+	height: 100%;
+	width: 100%;
+}
+
+.inner-label {
+	margin-bottom: 0px; /* override <label> style*/
+	display: table-cell;
+	vertical-align: middle;
+	font-weight: normal;
+}
+
+․form-horizontal > div {
+	display: inline-block;
+}
+
+.signature {
+	display: inline-block;
+	color: rgb(178, 178, 178);
+	font-size: smaller;
+}

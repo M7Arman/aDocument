@@ -1,50 +1,73 @@
-<div class="row">
+<div id="courswork" class="row">
 	<div id="paper">
-		<form class="form-horizontal" role="form" action="/uploads/referat_template.pdf">
-			<div class="form-group">
-				<label for="firstname" class="col-sm-2 control-label">Անուն</label>
-				<div class="col-sm-10 col-md-5">
-					<input  type="text" name="A" class="form-control" id="firstname"
-						   placeholder="Մուքտագրեք ձեր անունը․․․">
-					<p class="help-block">Օր․՝ Պողոս</p>
+		<div id="paper-writable-place">
+			<form class="form-horizontal" role="form" action="/uploads/referat_template.pdf">
+				<div id="ministry-of-education" class="static-block">
+					<div class="static-text text-center">ՀՀ Գիտության և կրթության նախարարություն</div>
 				</div>
-			</div>
-			<div class="form-group">
-				<label for="secondname" class="col-sm-2 control-label">Ազգանուն</label>
-				<div class="col-sm-10 col-md-5">
-					<input type="text" name="B" class="form-control" id="secondname"
-						   placeholder="Մուքտագրեք ձեր ազգանունը․․․">
-					<p class="help-block">Օր․՝ Պողոսյան</p>
+				<div class="">
+					<input id="university-name" class="center-block text-center block" type="text" placeholder="ՀԱՅԱՍՏԱՆԻ ՊԵՏԱԿԱՆ ՃԱՐՏԱՐԱԳԻՏԱԿԱՆ ՀԱՄԱԼՍԱՐԱՆ" name="university">
 				</div>
-			</div>
-			<div class="form-group">
-			<p>...</p>
-			</div>
-		</form>
+				<div id="department" class="center-block block advanced-block">
+					<input id="department-name" class="text-center inner-input" type="text" placeholder="ԲԳ եւ ՏՀ" name="department">
+					<label for="department-name" class="inner-label">Ֆակուլտետ</label>
+				</div>
+				<div id="chair" class="center-block block advanced-block">
+					<input id="chair-name" class="text-center inner-input" type="text" placeholder="Մաթեմատիկայի եւ գրաֆիկայի" name="chair">
+					<label for="chair-name" class="inner-label">ամբիոն</label>
+				</div>
+				<div id="courswork-text" class="static-block">
+					<div class="text-center">ԿՈԻՐՍԱՅԻՆ ԱՇԽԱՏԱՆՔ</div>
+				</div>
+				<div id="subject" class="block advanced-block">
+					<label for="subject-name" class="inner-label">Առարկա՝ </label>
+					<input id="subject-name" class="text-center inner-input" type="text" placeholder="ԷՀՄ կազմակերպում" name="subject">
+				</div>
+				<div id="group" class="block advanced-block">
+					<label for="group-name" class="inner-label">Խումբ՝ </label>
+					<input id="group-name" class="text-center inner-input" type="text" placeholder="ՎԻՀ208բ" name="group">
+				</div>
+				<div id="cours" class="block advanced-block">
+					<label for="cours-name" class="inner-label">Կուրս՝ </label>
+					<input id="cours-name" class="text-center inner-input" type="text" placeholder="3-րդ" name="cours">
+				</div>
+				<div id="student" class="block advanced-block">
+					<label for="student-name" class="inner-label">Ուսանող՝ /<div class="signature">ստորագր.</div>/</label>
+					<input id="student-name" class="text-center inner-input" type="text" placeholder="Կոստանդյան Արման" name="student">
+				</div>
+				<div id="lecturer" class="block advanced-block">
+					<label for="lecturer-name" class="inner-label">Ղեկավար՝ /<div class="signature">ստորագր.</div>/</label>
+					<input id="lecturer-name" class="text-center inner-input" type="text" placeholder="Արզումանյան Ս." name="lecturer">
+				</div>
+				<div id="head-of-chair" class="block advanced-block">
+					<label for="head-of-chair-name" class="inner-label">Ամբիոնի վարիչ՝ /<div class="signature">ստորագր.</div>/</label>
+					<input id="head-of-chair-name" class="text-center inner-input" type="text" placeholder="Դալլաքյան Ռ." name="head-of-chair">
+				</div>
+				<!--div id="city" class="center-block block advanced-block">
+					<input id="city-name" class="text-center inner-input" type="text" placeholder="Վանաձոր" name="X">
+					<label for="city-name" class="inner-label">2015</label>
+				</div-->
+			</form>
+		</div>
 	</div>
-	<input id="generate" type="button" name="g" value="Generate document" id="g">
-	<a id="download-document" href="#">Download</a>
-	<div id="result" style="background-color: #cccccc"></div>
+		<input id="generate" type="button" value="Generate document">
+		<a id="download-document" href="#">Download</a>
 </div>
 
 <!--script src="js/libs/form2js.js"></script-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.fileDownload/1.4.2/jquery.fileDownload.min.js"></script>
-
 <script type="text/javascript">
-	
+
 var select2Url = '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-beta.3/js/select2.min.js';
+	
 /* This functionality works when the document is ready. */
 $(function () {
-    loadPlugin(select2Url, 'select2', initalSelect2);
+    //loadPlugin(select2Url, 'select2', initalSelect2);
 	
 	// TODO: Add comment 
     $('input#generate').on( 'click', function(event) {
         event.preventDefault();
-		var requestBody = {
-			"first_name" : "Arman",
-			"last_name" : "Kostandyan"
-		};
-		
+		var requestBody = JSON.stringify($('form').serializeObject())
+		console.log("requestBody: " + requestBody);
 		sendJson('/courswork/create', requestBody);	
     });
 	
